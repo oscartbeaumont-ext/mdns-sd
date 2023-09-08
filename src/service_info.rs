@@ -198,6 +198,12 @@ impl ServiceInfo {
         &self.addresses
     }
 
+    /// Returns the mutable service's addresses
+    #[inline]
+    pub fn get_addresses_mut(&mut self) -> &mut HashSet<Ipv4Addr> {
+        &mut self.addresses
+    }
+
     /// Returns the service's TTL used for SRV and Address records.
     #[inline]
     pub fn get_host_ttl(&self) -> u32 {
